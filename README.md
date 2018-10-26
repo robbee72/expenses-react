@@ -10,6 +10,10 @@ to build node-module and new yarn.lock
 
 > yarn install
 
+to create node_modules for Production
+devDependencies will NOT be installed.
+> yarn install --production
+
 to build production
 
 > yarn run build:prod
@@ -21,3 +25,12 @@ to build production
 to start server.js
 
 node server/server.js
+
+
+Deploy to heroku
+
+>git status
+>git add .
+>git commit -m "   "
+>git push
+>git push heroku master
