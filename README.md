@@ -34,3 +34,7 @@ Deploy to heroku
 >git commit -m "   "
 >git push
 >git push heroku master
+
+generate dist bundle.js you have to re run This will
+create the bundle and style files.
+> yarn run build:prod

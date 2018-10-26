@@ -1,4 +1,5 @@
 import React from 'react';
+import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 import expenses from '../fixtures/expenses';
 import { EditExpensePage } from '../../components/EditExpensePage';
@@ -19,7 +20,7 @@ beforeEach(() => {
   );
 });
 
-test('should render EditExpensePage', () => {
+it('should render EditExpensePage', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -29,7 +30,7 @@ test('should handle editExpense', () => {
   expect(editExpense).toHaveBeenLastCalledWith(expenses[2].id, expenses[2]);
 });
 
-test('should handle removeExpense', () => {
+it('should handle removeExpense', () => {
   wrapper.find('button').simulate('click');
   expect(history.push).toHaveBeenLastCalledWith('/');
   expect(removeExpense).toHaveBeenLastCalledWith({
